@@ -1,0 +1,69 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+
+// Variables
+@import "variables";
+
+// Bulma
+@import "node_modules/bulma/bulma";
+
+// SASS Margin and Padding Helpers Loop
+@import "spacing-helpers";
+
+
+body, html {
+  background-color: $background-primary;
+}
+
+header {
+  nav {
+    .field {
+      margin-top: 8px;
+    }
+  }
+}
+
+button.nav-item {
+  background-color: transparent;
+  border: none;
+  color: $text-light;
+
+  &:hover {
+    color: $link-hover;
+  }
+
+  &.is-active {
+    color: $link-active;
+  }
+
+  &.is-tab {
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+    padding-bottom: calc(0.75rem - 1px);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: calc(0.75rem - 1px);
+  }
+
+  &:hover{
+    border-bottom-color: $primary;
+    border-top-color: transparent;
+    cursor: pointer;
+  }
+
+  &:is-active {
+    border-bottom: 3px solid $primary;
+    color: $primary;
+    padding-bottom: calc(0.75rem - 3px);
+  }
+}
+
+.page-container{
+  & .menu{
+    background-color: $white;
+  }
+}
+
+.page-sidebar-wrapper{
+  background-color: $white;
+}
