@@ -20,5 +20,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::namespace('Admin')->prefix('admin')->group(function () {
-    Route::get('categories', 'CategoriesController@index');
+    Route::get('categories', 'CategoriesController@index')->name('categories.index');
+    Route::get('categories/create', 'CategoriesController@create')->name('categories.create');
+    Route::post('categories', 'CategoriesController@store')->name('categories.store');
 });

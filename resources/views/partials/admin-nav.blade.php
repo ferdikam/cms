@@ -1,17 +1,17 @@
-<nav class="navbar ">
-    <div class="navbar-brand">
-        <a class="navbar-item" href="{{ url('/') }}">
-            {{ config('app.name', 'Laravel') }}
-        </a>
-        <div class="navbar-burger burger" data-target="navMenuExample">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </div>
-
-    <div id="navMenuExample" class="navbar-menu">
+<nav class="navbar has-shadow">
+    <div class="container">
+        <div id="topNav" class="navbar-menu">
         <div class="navbar-start">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="{{ url('/') }}">
+                    {{ config('app.name', 'Laravel') }}
+                </a>
+                <div class="navbar-burger burger" data-target="navMenuExample">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
             <a class="navbar-item is-tab" href="{{ url('/') }}">
                 Bureau
             </a>
@@ -51,5 +51,6 @@
                 </div>
             @endif
         </div>
+    </div>
     </div>
 </nav>
